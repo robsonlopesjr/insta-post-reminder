@@ -1,8 +1,11 @@
 import { Notifyer } from './Notifyer.js';
+import { Timer } from './Timer.js';
 
 const App = {
     async start() {
         try {
+            Timer.init(0.1 * 60);
+
             await Notifyer.init();
 
             Notifyer.notify({
